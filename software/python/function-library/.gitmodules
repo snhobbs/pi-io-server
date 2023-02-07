@@ -1,0 +1,3 @@
+[submodule "libs/EmitterBoardControlPi"]
+	path = libs/EmitterBoardControlPi
+	url = git@github.com:snhobbs/EmitterBoardControlPi.git

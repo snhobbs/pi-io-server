@@ -1,0 +1,30 @@
+Central page has a stop/start, run type selection
+While running have a percent done, current run type, and run stage
+Some data plots might be fun
+
+When done show a big coloured pass/fail with the serial number, firmware version, and hardware version
+If the run fails show the stage of failure, run a data analysis to make a short explanation
+
+
+Have a data view page with each of several plot types: time series, histogram, fft
+this will need to be searchable by date, serial number, and firmware version 
+
+Central Page States:
+  Initial -> Start Button
+  Running -> Status, running plots, percent complete, time remaining
+  Cancelled -> As much of the finished info as possible
+  Finished  -> Pass/Fail, advanced View, Start button
+
+  All state needs to be server side to keep from colliding with other interfaces
+  The Cancelled and finished run summary can be page side
+
+  Needs to not send any commands when the page reloads
+
+  Get status from server to load buttons
+
+  Stop Button
+  Just have an update state callback
+
+
+  Need to update the list of runs when the server is running.
+  Server needs to monitor that the run hasn't failed, if it failed server needs to restart run a number of time until delaring failure

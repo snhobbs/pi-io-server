@@ -1,0 +1,11 @@
+[Unit]
+Description=Supervisord Start
+#After=network.target
+
+[Service]
+#User=simon
+#Group=users
+WorkingDirectory=/tmp
+ExecStart=/usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+[Install]
+WantedBy=multi-user.target
